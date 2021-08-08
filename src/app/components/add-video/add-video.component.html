@@ -1,0 +1,42 @@
+<div class="row">
+  <div>
+    <input type="text" class="form-control" #idRef />
+    <label>Add a name</label>
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Name"
+      [(ngModel)]="userData.name"
+    />
+    <label>Add a link</label>
+    <input
+      type="text"
+      class="form-control"
+      placeholder="link..."
+      [(ngModel)]="userData.link"
+    />
+    <label>Add a comment</label>
+    <input
+      type="text"
+      class="form-control"
+      placeholder="..."
+      [(ngModel)]="userData.comment"
+    />
+    <hr />
+    <button class="btn btn-primary" (click)="onAddVideo(idRef)">
+      Add a video
+    </button>
+
+    <div>{{ userData.name }}</div>
+    <div>{{ userData.link }}</div>
+    <div>{{ userData.comment }}</div>
+  </div>
+  <!--<div
+    (click)="alertOnClick($event)"
+    (mouseenter)="onMouseEnter()"
+    (mouseleave)="onMouseLeave()"
+  >
+    adddd!!
+  </-div>
+  {{ status }}-->
+</div>

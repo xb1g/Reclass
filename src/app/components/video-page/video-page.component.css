@@ -1,0 +1,38 @@
+h1,
+h2,
+h3 {
+  color: #63008a;
+  padding: 10px;
+}
+.clips {
+  background: #ffff98;
+  padding: 20px, 20px;
+  border: 2px solid #595a58;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  height: 300px;
+  font: size 29px;
+  text-transform: capitalize;
+  text-align: left;
+}
+.tag span {
+  color: blueviolet;
+}
+.page-content {
+  width: 100%;
+}
+.icons {
+  margin-left: 0;
+  margin-right: 0;
+  background-color: #fff;
+  width: 40px;
+  height: 40px;
+  float: right;
+}
+
+mat-form-field,
+mat-select {
+  margin-left: 10px;
+  border-radius: 5px;
+  color: rgb(102, 0, 128);
+}

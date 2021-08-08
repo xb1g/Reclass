@@ -1,0 +1,24 @@
+h1 {
+  color: rgb(152, 0, 0);
+}
+
+.main-content {
+  padding: auto;
+  height: 100%;
+  size: 100%;
+  display: block;
+  align-items: center;
+  margin: auto;
+  margin-left: 25%;
+}
+.sidebar {
+  float: left;
+  position: -webkit-sticky;
+  position: sticky;
+  padding-bottom: 25px;
+  width: 25%;
+  background: rgb(231, 231, 231);
+  border-bottom-right-radius: 40px;
+  border-right: 2px solid;
+  border-bottom: 2px solid;
+}

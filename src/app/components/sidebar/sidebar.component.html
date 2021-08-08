@@ -1,0 +1,45 @@
+<header>
+  <img src="assets/logo.png" class="logo" href="/" />
+  <a class="logo-text" style="color: #ffff" href="/">Reclass</a>
+</header>
+<h1>Subjects</h1>
+<div>
+  <button
+    [ngClass]="{ selected: subject === 'Thai' }"
+    type="button"
+    class="subject"
+    (click)="handleChangeSubject('Thai')"
+  >
+    Thai
+  </button>
+</div>
+<div>
+  <button
+    [ngClass]="{ selected: subject === 'English' }"
+    type="button"
+    class="subject"
+    (click)="handleChangeSubject('English')"
+  >
+    English
+  </button>
+</div>
+<div>
+  <button
+    [ngClass]="{ selected: subject === 'Mathematics' }"
+    type="button"
+    class="subject"
+    (click)="handleChangeSubject('Mathematics')"
+  >
+    Mathematics
+  </button>
+</div>
+<div>
+  <button
+    [ngClass]="{ selected: subject === 'Computer' }"
+    type="button"
+    class="subject"
+    (click)="handleChangeSubject('Computer')"
+  >
+    Computer
+  </button>
+</div>

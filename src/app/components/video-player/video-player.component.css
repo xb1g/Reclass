@@ -1,0 +1,24 @@
+p {
+  font-size: 10px;
+  margin: 10px;
+}
+* {
+  padding: auto;
+  margin: 10px;
+}
+
+h2 {
+  margin: 10px;
+}
+input {
+  border-radius: 4px;
+}
+
+iframe {
+  border: 1px;
+  border-radius: 10px;
+  margin: 10px 10px 10px 10px;
+  width: 90%;
+  height: 90%;
+  float: right solid;
+}

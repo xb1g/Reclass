@@ -1,0 +1,22 @@
+<h1>{{ videoValues.name }}</h1>
+
+<mat-form-field appearance="fill">
+  <mat-label>Select week</mat-label>
+  <mat-select>
+    <mat-option value="one">week 1</mat-option>
+    <mat-option value="two">week 2</mat-option>
+    <mat-option value="three">week 3</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<div class="page-content">
+  <h2>Full video</h2>
+  <div class="video">
+    <app-video-player [videoValues]="videoValues"></app-video-player>
+  </div>
+  <h2>Shorts</h2>
+
+  <!-- <div #anotherDiv>anotherdiv</div>
+  <app-add-video (vAdd)="videoWasAdded($event)" (setTitle)="getTitle($event)">
+  </app-add-video> -->
+</div>

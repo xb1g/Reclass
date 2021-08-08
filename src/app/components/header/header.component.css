@@ -1,0 +1,26 @@
+.searchbar {
+  float: right;
+  margin: 10px;
+}
+.searchbox {
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  color: #333;
+  font-size: 14px;
+  height: 40px;
+  line-height: 1;
+  padding: 0 10px;
+}
+.searchbox:hover {
+  background-color: #ffffff;
+  border-color: #000000;
+  color: #333;
+  cursor: pointer;
+}
+
+.logo {
+  height: 40px;
+}
