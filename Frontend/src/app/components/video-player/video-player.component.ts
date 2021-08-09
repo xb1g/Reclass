@@ -22,6 +22,16 @@ export class VideoPlayerComponent implements OnInit {
     //console.log(this.videoURL);
   }
 
+  handleSave() {
+    // do sth
+  }
+  handleFavorite() {
+    // do sth
+  }
+  handleLabel() {
+    // do sth
+  }
+
   ngOnInit(): void {
     this.videoURL = `http://www.youtube.com/embed//${this.videoValues.link}`;
     this.safeURL = this._sanitizer.bypassSecurityTrustResourceUrl(

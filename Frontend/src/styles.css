@@ -3,19 +3,10 @@ html,
 body {
   height: 100%;
   margin: 0;
-}
-
-html,
-body {
-  height: 100%;
+  font-family: "Quicksand";
 }
 
 * {
   margin: 0;
-  font-family: Quicksand;
-}
-
-html,
-body {
-  height: 100%;
+  font-family: "Quicksand";
 }

@@ -34,6 +34,7 @@ export class VideoPageComponent implements OnInit {
     date: '31/3/21',
   };
   something = 'asdasd';
+
   // videoWasAdded(videoData: { name: string; link: string; comment: string }) {
   //   console.log(videoData);
   // }
