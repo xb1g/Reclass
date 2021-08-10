@@ -1,20 +1,11 @@
-h1,
-h2,
-h3 {
+.video-title {
   color: #63008a;
   padding: 10px;
+  font-family: Quicksand;
+  font-size: 40px;
+  font-weight: 700;
 }
-.clips {
-  background: #ffffe3;
-  padding: 20px, 20px;
-  border: 2px solid #595a58;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  height: 300px;
-  font: size 29px;
-  text-transform: capitalize;
-  text-align: left;
-}
+
 .tag span {
   color: blueviolet;
 }
@@ -23,18 +14,17 @@ h3 {
   height: 120%;
 }
 
-.icons {
-  margin-left: 0;
-  margin-right: 0;
-  background-color: rgb(255, 253, 158);
-  width: 40px;
-  float: right;
-  border-radius: 5%;
-}
-
 mat-form-field,
 mat-select {
   margin-left: 10px;
   border-radius: 5px;
   color: rgb(102, 0, 128);
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 500;
+  color: #63008a;
+  margin-bottom: 10px;
+  margin-left: 10px;
 }

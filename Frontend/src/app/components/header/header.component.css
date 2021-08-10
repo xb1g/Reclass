@@ -9,6 +9,7 @@
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   width: 30%;
+  background-color: rgb(235, 235, 235);
 }
 .searchbox {
   background-color: #fff;
@@ -25,6 +26,7 @@
 }
 .searchbox:hover,
 .logo:hover {
+  border-radius: 12px;
   background-color: #ffffff;
   border-color: #000000;
   color: #333;

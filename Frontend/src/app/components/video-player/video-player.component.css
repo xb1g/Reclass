@@ -8,27 +8,57 @@ p {
 }
 
 .icon {
+  margin: 0;
+  margin-bottom: 10px;
   align-items: center;
+  padding: 2px;
   cursor: pointer;
-  height: 25px;
-  width: 25px;
+  height: 40px;
+  width: 40px;
   color: #fff;
   background-color: rgb(103, 0, 129);
-  border-radius: 10%;
+  border-radius: 20%;
 }
 
+.clips {
+  align-items: center;
+  background: #ffffe3;
+  /* padding: 20px, 20px; */
+  border: 2px solid #595a58;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  height: 300px;
+  font: size 29px;
+  text-transform: capitalize;
+  text-align: left;
+  position: relative;
+  padding-top: 56.25%;
+  padding-right: 0;
+}
 h2 {
   margin: 10px;
 }
 input {
   border-radius: 4px;
 }
+.icons {
+  margin: 5px;
+  width: 6%;
+  position: absolute;
+  top: 2px;
+  right: 5px;
+  float: right;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 5%;
+}
 
 iframe {
   border: 1px;
   border-radius: 15px;
-  margin: 10px 10px 10px 10px;
+  margin: 10px 0px 0px 10px;
   width: 90%;
   height: 90%;
-  float: right solid;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
