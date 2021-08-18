@@ -4,18 +4,13 @@
 </header>
 <h1>Subjects</h1>
 <div>
-  <button
-    [ngClass]="{ selected: subject === 'Thai' }"
-    type="button"
-    class="subject"
-    (click)="handleChangeSubject('Thai')"
-  >
+  <!-- [ngClass]="{ selected: subject === 'Thai' }" -->
+  <button type="button" class="subject" (click)="handleChangeSubject('Thai')">
     Thai
   </button>
 </div>
 <div>
   <button
-    [ngClass]="{ selected: subject === 'English' }"
     type="button"
     class="subject"
     (click)="handleChangeSubject('English')"
@@ -24,18 +19,14 @@
   </button>
 </div>
 <div>
-  <button
-    [ngClass]="{ selected: subject === 'Mathematics' }"
-    type="button"
-    class="subject"
-    (click)="handleChangeSubject('Mathematics')"
-  >
-    Mathematics
+  <!-- [ngClass]="{ selected: subject === 'Math' }" -->
+  <button type="button" class="subject" (click)="handleChangeSubject('Math')">
+    Math
   </button>
 </div>
 <div>
+  <!-- [ngClass]="{ selected: subject === 'Computer' }" -->
   <button
-    [ngClass]="{ selected: subject === 'Computer' }"
     type="button"
     class="subject"
     (click)="handleChangeSubject('Computer')"

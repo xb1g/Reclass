@@ -5,7 +5,9 @@ import {
   ViewChild,
   ElementRef,
   Input,
+  OnChanges,
 } from '@angular/core';
+import { VideoService, Video } from '../../services/video.service';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -18,37 +20,24 @@ import { MatSelectModule } from '@angular/material/select';
   styleUrls: ['./video-page.component.css'],
   encapsulation: ViewEncapsulation.None,
 })
-export class VideoPageComponent implements OnInit {
+export class VideoPageComponent implements OnInit, OnChanges {
   @Input() subject: string | undefined;
-  // @ViewChild('anotherDiv', { static: true })
-  // anotherDiv!: ElementRef;
-  // @ViewChild('videoPlayer', { static: true }) videoPlayer!: Component;
-  // title: string = '';
-  videoValues: {
-    name: string;
-    link: string;
-    date: string;
-  } = {
-    name: 'angular free code camp',
-    link: 'LiOzTQAz13Q',
-    date: '31/3/21',
-  };
-  something = 'asdasd';
+  title: string | undefined = this.videoService.videoValues.name;
 
-  // videoWasAdded(videoData: { name: string; link: string; comment: string }) {
-  //   console.log(videoData);
-  // }
+  constructor(private videoService: VideoService) {}
 
-  // getTitle(data: { title: string }) {
-  //   this.title = data.title;
-  // }
-
-  constructor() {
-    console.log(this.videoValues);
+  ngOnChanges(): void {
+    console.log('onchangessss');
   }
-
   ngOnInit(): void {
-    console.log(this.videoValues);
+    console.log('init vdopage');
+    this.videoService.getVideos();
+    // .subscribe((data) => {
+    //   console.log(data);
+    //   this.videoService.videoValues = data;
+    //   console.log(this.videoService.videoValues);
+    // });
+
     // console.log(this.anotherDiv.nativeElement);
   }
 }

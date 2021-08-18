@@ -1,4 +1,4 @@
-<h1 class="video-title">{{ videoValues.name }}</h1>
+<h1 class="video-title">{{ title }}</h1>
 
 <mat-form-field appearance="fill">
   <mat-label>Select week</mat-label>
@@ -11,11 +11,17 @@
 
 <div class="page-content">
   <h2>Full video</h2>
-  <div class="video">
-    <app-video-player [videoValues]="videoValues"></app-video-player>
+  <div class="clips">
+    <app-video-player></app-video-player>
   </div>
   <h2>Shorts</h2>
-
+  <!-- <div
+    class="shorts"
+    *ngFor="let short of videoValues; let i = index"
+    [hidden]="i == 0"
+  >
+    <app-video-player [videoValues]="short"></app-video-player>
+  </div> -->
   <!-- <div #anotherDiv>anotherdiv</div>
   <app-add-video (vAdd)="videoWasAdded($event)" (setTitle)="getTitle($event)">
   </app-add-video> -->

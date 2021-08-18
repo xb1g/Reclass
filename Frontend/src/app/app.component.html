@@ -1,9 +1,9 @@
 <app-header class="header"></app-header>
 <div class="sidebar">
-  <app-sidebar (changeSubject)="handleChangeSubject($event)"></app-sidebar>
+  <app-sidebar></app-sidebar>
 </div>
 <div class="main-content">
-  <app-video-page [subject]="subject"> </app-video-page>
+  <app-video-page></app-video-page>
 </div>
 
 <router-outlet></router-outlet>

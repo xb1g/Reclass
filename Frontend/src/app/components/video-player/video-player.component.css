@@ -19,6 +19,21 @@ p {
   background-color: rgb(103, 0, 129);
   border-radius: 20%;
 }
+.shorts {
+  align-items: center;
+  background: #ffffe3;
+  /* padding: 20px, 20px; */
+  border: 2px solid #595a58;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  height: 100px;
+  font: size 29px;
+  text-transform: capitalize;
+  text-align: left;
+  position: relative;
+  padding-top: 56.25%;
+  padding-right: 0;
+}
 
 .clips {
   align-items: center;

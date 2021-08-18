@@ -15,6 +15,9 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { VideoPageComponent } from './components/video-page/video-page.component';
 import { AddVideoComponent } from './components/add-video/add-video.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { VideoService } from './services/video.service';
+import { PageService } from './services/page.service';
 
 @NgModule({
   declarations: [
@@ -34,6 +37,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatFormFieldModule,
     MatSelectModule,
     BrowserAnimationsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent], //root of evt
