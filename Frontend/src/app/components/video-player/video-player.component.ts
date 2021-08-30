@@ -41,11 +41,13 @@ export class VideoPlayerComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log('vidval from service', this.videoService.videoValues);
-    this.videoURL = `http://www.youtube.com/embed/${this.videoService.videoValues.link}`;
-    this.safeURL = this._sanitizer.bypassSecurityTrustResourceUrl(
-      this.videoURL
-    );
+    this.videoService.emitVideo.subscribe((video) => {
+      this.videoURL = `http://www.youtube.com/embed/${video.link}`;
+      this.safeURL = this._sanitizer.bypassSecurityTrustResourceUrl(
+        this.videoURL
+      );
+    });
+    console.log('safeurl');
     console.log(this.safeURL);
   }
 }

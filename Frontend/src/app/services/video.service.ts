@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 import {
   HttpClient,
   HttpHeaders,
@@ -8,6 +8,7 @@ import {
 } from '@angular/common/http';
 import { map, tap } from 'rxjs/operators';
 import { PageService } from './page.service';
+import { Observable } from 'rxjs';
 
 export interface Video {
   name: string;
@@ -20,6 +21,7 @@ export interface Video {
   providedIn: 'root',
 })
 export class VideoService {
+  emitVideo = new EventEmitter();
   videoValues: Video = {
     name: 'default',
     link: 'default',
@@ -32,6 +34,15 @@ export class VideoService {
     console.log(this.pageService.page);
   }
 
+  getWeeks() {
+    const subject = this.pageService.page.subject;
+    this.http
+      .get(`http://localhost:3000/${subject}`)
+      .subscribe((response: any) => {
+        this.pageService.page.weeks = response.length;
+      });
+  }
+
   getVideos() {
     console.log('geting vdo');
     const subject = this.pageService.page.subject;
@@ -42,23 +53,30 @@ export class VideoService {
     return this.http
       .get(`http://localhost:3000/${subject}`, {
         params: postParams,
-        observe: 'events',
       })
-      .pipe(
-        tap((event: any) => {
-          console.log('tap');
-          if (event.type === HttpEventType.Sent) {
-            // this.postsList = event.body;
-            console.log('sent');
-            console.log(event);
-          }
-          if (event.type === HttpEventType.Response) {
-            console.log('eventbody');
-            console.log(event.body[0]);
-            this.videoValues = event.body[0];
-            return event.body[0];
-          }
-        })
-      );
+      .subscribe((response: any) => {
+        console.log('subbbb');
+        console.log(response);
+        console.log(response[0]);
+        this.videoValues = response[0];
+        this.emitVideo.emit(this.videoValues);
+      });
+    // .pipe(
+    //   tap((event: any) => {
+    //     console.log(event.body[0]);
+    //     this.videoValues = event.body[0];
+    //     console.log('tap');
+    //     if (event.type === HttpEventType.Sent) {
+    //       // this.postsList = event.body;
+    //       console.log('sent');
+    //     }
+    //     if (event.type === HttpEventType.Response) {
+    //       console.log('eventbody');
+    //       console.log(event.body[0]);
+    //       this.videoValues = event.body[0];
+    //       return event.body[0];
+    //     }
+    //   })
+    // );
   }
 }

@@ -18,6 +18,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { VideoService } from './services/video.service';
 import { PageService } from './services/page.service';
+import { LoginComponent } from './components/account/login/login.component';
+import { AdminComponent } from './components/account/admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { PageService } from './services/page.service';
     SidebarComponent,
     VideoPageComponent,
     AddVideoComponent,
+    LoginComponent,
+    AdminComponent,
   ],
   imports: [
     BrowserModule,

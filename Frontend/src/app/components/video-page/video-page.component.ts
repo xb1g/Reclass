@@ -31,7 +31,9 @@ export class VideoPageComponent implements OnInit, OnChanges {
   }
   ngOnInit(): void {
     console.log('init vdopage');
+    this.videoService.getWeeks();
     this.videoService.getVideos();
+
     // .subscribe((data) => {
     //   console.log(data);
     //   this.videoService.videoValues = data;

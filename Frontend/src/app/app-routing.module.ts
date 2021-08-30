@@ -3,7 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AddVideoComponent } from './components/add-video/add-video.component';
 
-const routes: Routes = [{ path: 'add', component: AddVideoComponent }];
+const routes: Routes = [
+  { path: 'add', component: AddVideoComponent },
+  { path: 'other', component: AddVideoComponent },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

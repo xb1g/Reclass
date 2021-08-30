@@ -15,7 +15,8 @@ export class SidebarComponent implements OnInit {
   handleChangeSubject(subject: string) {
     this.pageService.page.subject = subject;
     console.log(this.pageService.page);
-    this.videoService.getVideos();
+    const ret = this.videoService.getVideos();
+    console.log('Ret', ret);
     console.log(this.videoService.videoValues);
     // .subscribe((data) => {
     //   console.log(data);
@@ -24,7 +25,5 @@ export class SidebarComponent implements OnInit {
     // });
   }
 
-  ngOnInit(): void {
-    this.pageService.page = { subject: 'Thai', week: 1 };
-  }
+  ngOnInit(): void {}
 }
