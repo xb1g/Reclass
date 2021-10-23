@@ -3,7 +3,7 @@ import React from "react";
 import { Navigation } from "react-minimal-side-navigation";
 import "react-minimal-side-navigation/lib/ReactMinimalSideNavigation.css";
 
-export default function App() {
+export function Sidebar() {
   return (
     <>
       <Navigation
@@ -16,12 +16,14 @@ export default function App() {
           {
             title: "Dashboard",
             itemId: "/dashboard",
-            // elemBefore: () => <Icon name="inbox" />,
+            // you can use your own custom Icon component as well
+            // icon is optional
+            elemBefore: () => <Icon name="inbox" />,
           },
           {
             title: "Management",
             itemId: "/management",
-            // elemBefore: () => <Icon name="users" />,
+            elemBefore: () => <Icon name="users" />,
             subNav: [
               {
                 title: "Projects",
